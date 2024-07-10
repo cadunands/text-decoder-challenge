@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  rel="stylesheet" href="/styles.css">
-    <title>Decodificador de Texto</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles.css" />
+		<script defer src="script.js"></script>
+		<title>Decodificador de Texto</title>
+	</head>
+	<body>
+		<img src="/assets/alura-icon.png" alt="Alura Icon" class="alura-icon" />
+
+		<div class="container">
+			<textarea id="inputText" placeholder="Digite seu texto"></textarea>
+
+			<div class="notice-container">
+				<img src="/assets/notice.svg" class="notice-icon" />
+			</div>
+
+			<div class="buttons">
+				<button id="encrypt" onclick="encryptText()">
+					Criptografar
+				</button>
+				<button id="decrypt" onclick="decryptText()">
+					Descriptografar
+				</button>
+			</div>
+
+			<div class="result">
+				<img src="/assets/icon.png" id="resultImage" />
+				<h1 id="resultHeading">Nenhuma mensagem encontrada</h1>
+				<p id="default-message">
+					Digite um texto que você deseja <br />
+					criptografar ou descriptografar
+				</p>
+				<p id="outputText"></p>
+
+				<div class="buttons">
+					<button id="copy" onclick="copyText()">Copy</button>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<p>Desenvolvido por Eduardo Fernandes ^^</p>
+		</footer>
+	</body>
 </html>

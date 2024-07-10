@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --dark-blue-300: #0A3871;
+    --dark-gray: #D8DFE8;
+    --dark-blue-gray: #F3F5FC;
+    --gray-500: #343A40;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--dark-blue-gray);
+    position: relative;
+}
+
+.alura-icon {
+    position: absolute;
+    top: 30px;
+    left: 0.1px;
+    width: 120px;
+    height: 48px;
+    z-index: 2;
+    height: auto;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 100%;
+    position: relative;
+    margin: 10px auto 80px;
+}
+
+textarea {
+    font-size: 30px;
+    color: var(--dark-blue-300);
+    width: 70vh;
+    max-width: 100%;
+    height: 50vh;
+    max-height: 500px;
+    margin: 80px 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-blue-gray);
+    border: none;
+    resize: none;
+    overflow: auto;
+}
+
+textarea::placeholder {
+    color: var(--dark-blue-300);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 50rem;
+    margin: 100px auto 40px;
+}
+
+.buttons button {
+    flex: 1;
+    font-size: 18px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+#encrypt {
+    background-color: var(--dark-blue-300);
+}
+
+#decrypt {
+    background-color: var(--dark-gray);
+    border: 0.5px solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+}
+
+#copy {
+    background-color: var(--dark-blue-300);
+}
+
+#copy:hover {
+    background-color: gray;
+}
+
+#copy:active {
+    background-color: #1e7e34;
+}
+
+.notice-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice-icon {
+    bottom: 80px;
+}
+
+.result {
+    position: fixed;
+    bottom: 6%;
+    right: 1.5%;
+    width: 22rem;
+    max-width: calc(100% - 40px);
+    height: 90vh;
+    max-height: 100%;
+    border-radius: 32px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 2;
+    margin-top: 100px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    color: var(--gray-500);
+}
+
+.result h1 {
+    font-size: 24px;
+}
+
+.result h2 {
+    margin-bottom: 10px;
+}
+
+.result p {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.result img {
+    margin: 100px auto 20px;
+    width: 21rem;
+    height: 19rem;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--dark-blue-300);
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .alura-icon {
+        top: 30px;
+        width: 120px;
+        height: 48px;
+        z-index: 2;
+    }
+
+    textarea {
+        font-size: 26px;
+        height: 45vh;
+        margin: 60px 0 20px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-bottom: 70px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin: 0 auto 20px;
+    }
+
+    .result {
+        position: static;
+        margin-left: 40px;
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    .result img {
+        margin: 20px auto;
+    }
+
+
+    .notice-icon {
+        margin-bottom: 10px;
+        bottom: 80px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .alura-icon {
+        top: 30px;
+        width: 120px;
+        height: 48px;
+        z-index: 2;
+    }
+
+    textarea {
+        font-size: 24px;
+        height: 40vh;
+        margin: 40px 0 20px;
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%;
+        margin: 60px auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin: 0 auto 20px;
+    }
+
+    .result {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .result img {
+        margin: 20px auto;
+    }
+}
