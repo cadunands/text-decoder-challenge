@@ -25,7 +25,7 @@ Siga as etapas abaixo para clonar o repositório e executar o projeto localmente
 
 1. Clone o repositório:
 
-   git clone https://github.com/cadunands/text-decoder-challenge
+   ``git clone https://github.com/cadunands/text-decoder-challenge``
 
 
 2. Inicie com a extensão Live Server no VSCode ou abra normalmente
